@@ -43,7 +43,7 @@ const Settings = () => {
         <h4>Total cards</h4>
           
         <div>
-              <Counter cardsCount = {cardsCount} />
+              <Counter cardsCount = {cardsCount} onClick = {setCardsCount} />
         </div>
 
     </div>
