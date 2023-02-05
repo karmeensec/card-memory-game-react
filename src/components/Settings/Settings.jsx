@@ -3,7 +3,7 @@ import styles from './Settings.module.css';
 import {CATEGORIES, DIFFICULTY, INITIAL_CARD_COUNT} from './../../../constants.js';
 import RadioButton from '../RadioButton';
 import Counter from '../Counter';
-
+import PropTypes from 'prop-types'
 
 
 const Settings = ({startGame}) => {
@@ -61,3 +61,9 @@ const Settings = ({startGame}) => {
 }
 
 export default Settings
+
+Settings.propTypes = {
+
+  startGame: PropTypes.func.isRequired,
+
+}
