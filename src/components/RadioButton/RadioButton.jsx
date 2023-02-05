@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './RadioButton.module.css';
+import PropTypes from 'prop-types'
 
-const RadioButton = ({ name, category, onChange }) => {
+const RadioButton = ({ name, selectItem, onChange }) => {
 
-    const isChecked = name === category;    // if both are equal, true - false
+    const isChecked = name === selectItem;    // if both are equal, true - false
 
   return (
 
@@ -18,3 +19,9 @@ const RadioButton = ({ name, category, onChange }) => {
 }
 
 export default RadioButton
+
+RadioButton.propTypes = {
+    name: PropTypes.string.isRequired,
+    selectItem: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+}
