@@ -1,0 +1,17 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inknut Antiqua', serif;
+    color: #1C2833;
+
+}
+
+h1 {
+
+    font-size: 1rem;
+    padding: 5px;
+    opacity: 0.4;
+
+}
