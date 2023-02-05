@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import Background from './components/Background/Background'
-import useGetImages from './hooks/useGetImages'
+import useGetPhotos from './hooks/useGetPhotos'
 
 
 function App() {
 
-  useGetImages();
+  const photos =  useGetPhotos();
+  console.log(photos);
 
   return (
     
