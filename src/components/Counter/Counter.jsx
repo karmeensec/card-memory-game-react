@@ -3,14 +3,17 @@ import './Counter.css'
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
 
-const Counter = () => {
+const Counter = ({ cardsCount }) => {
+
+
+
 
   return (
 
     <div className='total'>
         
             <button className='minus'> <AiOutlineMinus /> </button>
-            <span className='total'> 10 </span>
+            <span className='total'> {cardsCount} </span>
             <button className='plus'> <AiOutlinePlus /> </button>
 
     </div>
