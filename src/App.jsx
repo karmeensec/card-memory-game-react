@@ -8,12 +8,14 @@ import useGetPhotos from './hooks/useGetPhotos'
 
 function App() {
 
-  const photos =  useGetPhotos();
+  const [gameOptions, setGameOptions] = useState(null);
+
+  const photos =  useGetPhotos(gameOptions);
   console.log(photos);
 
   const startGame = function(options) {
 
-    console.log(options);
+    setGameOptions(options);
 
   }
 
