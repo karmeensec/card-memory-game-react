@@ -8,10 +8,11 @@ import RadioButton from '../RadioButton';
 const Settings = () => {
 
     const [category, setCategory] = useState(CATEGORIES[0]);
+    const [difficulty, setDifficulty] = useState(DIFFICULTY[0]);
 
   return (
 
-    <div className={`${styles.settings} glassmorphism`} >
+    <div className={`${styles.settings} `} >
 
         <h2>Settings</h2>
 
@@ -30,7 +31,7 @@ const Settings = () => {
         <div className={`${styles.setting}`}>
 
             {DIFFICULTY.map( item => {
-                return <RadioButton key={item} name={item} selectItem = {category} onChange = { (e)=> setCategory(e.target.value) } />
+                return <RadioButton key={item} name={item} selectItem = {difficulty} onChange = { (e)=> setDifficulty(e.target.value) } />
             } )}
 
         </div>
