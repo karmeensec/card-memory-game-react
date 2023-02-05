@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Background from './components/Background/Background'
+import Settings from './components/Settings/Settings'
 import useGetPhotos from './hooks/useGetPhotos'
+
 
 
 function App() {
@@ -14,6 +16,9 @@ function App() {
     <>
       
       <Background />
+      <h1>Card Memory Game</h1>
+      <Settings />
+
     </>
   )
 }
