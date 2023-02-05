@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Settings.module.css';
 import {CATEGORIES} from './../../../constants.js';
 import RadioButton from '../RadioButton';
 
 
 const Settings = () => {
+
+    const [category, setCategory] = useState(CATEGORIES[0]);
 
   return (
 
