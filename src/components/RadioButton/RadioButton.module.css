@@ -1,9 +1,9 @@
 /* Link to author's CODEPEN: https://codepen.io/aaroniker/pen/ZEYoxEY */
 
 :root {
-    --active: #34495E;
+    --active: #1C2833;
     --active-inner: #fff;
-    --focus: 2px #34495E;
+    --focus: 2px #1C2833;
     --border: #bbc1e1;
     --background: #fff;
     --disabled: #f6f8ff;
@@ -15,9 +15,9 @@
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
     .radioBox input[type='radio'] {
-        --active: #34495E;
+        --active: #1C2833;
         --active-inner: #fff;
-        --focus: 2px #34495E;
+        --focus: 2px #1C2833;
         --border: #bbc1e1;
         --background: #fff;
 
