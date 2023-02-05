@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './Settings.module.css';
-import {CATEGORIES, DIFFICULTY} from './../../../constants.js';
+import {CATEGORIES, DIFFICULTY, INITIAL_CARD_COUNT} from './../../../constants.js';
 import RadioButton from '../RadioButton';
 import Counter from '../Counter';
 
@@ -10,6 +10,7 @@ const Settings = () => {
 
     const [category, setCategory] = useState(CATEGORIES[0]);
     const [difficulty, setDifficulty] = useState(DIFFICULTY[0]);
+    const [cardsCount, setCardsCount] = useState(INITIAL_CARD_COUNT);
 
   return (
 
@@ -42,7 +43,7 @@ const Settings = () => {
         <h4>Total cards</h4>
           
         <div>
-              <Counter />
+              <Counter cardsCount = {cardsCount} />
         </div>
 
     </div>
