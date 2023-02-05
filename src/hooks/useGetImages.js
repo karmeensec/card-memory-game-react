@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const MAIN_URL =  'https://api.pexels.com/v1/search?query=nature';
 const getRandomPage = () => ( Math.round(Math.random() * (10 -1) + 1 ))  // get random 10 pages
 
 const useGetImages = () => {
+
+    const [photos, setPhotos] = useState([]);
+
 
     const constructURL = function() {
 
@@ -30,7 +33,7 @@ const useGetImages = () => {
               Authorization: import.meta.env.VITE_REACT_API_AUTH_KEY,
             }
           
-          })
+          }).then(res => res.json()).then(data => console.log(data.photos));
 
       }
     
