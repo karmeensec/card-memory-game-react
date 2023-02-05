@@ -18,7 +18,7 @@ const Settings = () => {
         <div className={`${styles.setting}`}>
 
             {CATEGORIES.map( item => {
-                return <RadioButton key={item} name={item} category = {category} />
+                return <RadioButton key={item} name={item} category = {category} onChange = { (e)=> setCategory(e.target.value) } />
             } )}
 
         </div>
