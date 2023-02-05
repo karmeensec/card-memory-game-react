@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './Settings.module.css';
 import {CATEGORIES, DIFFICULTY} from './../../../constants.js';
 import RadioButton from '../RadioButton';
+import Counter from '../Counter';
 
 
 
@@ -16,6 +17,7 @@ const Settings = () => {
 
         <h2>Settings</h2>
 
+
         <h4>Categories </h4>
 
         <div className={`${styles.setting}`}>
@@ -26,6 +28,7 @@ const Settings = () => {
 
         </div>
 
+
         <h4>Difficulty</h4>
 
         <div className={`${styles.setting}`}>
@@ -34,6 +37,12 @@ const Settings = () => {
                 return <RadioButton key={item} name={item} selectItem = {difficulty} onChange = { (e)=> setDifficulty(e.target.value) } />
             } )}
 
+        </div>
+
+        <h4>Total cards</h4>
+          
+        <div>
+              <Counter />
         </div>
 
     </div>
