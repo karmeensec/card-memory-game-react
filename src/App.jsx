@@ -11,13 +11,19 @@ function App() {
   const photos =  useGetPhotos();
   console.log(photos);
 
+  const startGame = function(options) {
+
+    console.log(options);
+
+  }
+
   return (
     
     <>
       
       <Background />
       <h1>Card Memory Game</h1>
-      <Settings />
+      <Settings startGame = {startGame} />
 
     </>
   )
