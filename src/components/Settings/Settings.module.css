@@ -12,3 +12,13 @@
     text-align: center;
 
 }
+
+.setting {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
