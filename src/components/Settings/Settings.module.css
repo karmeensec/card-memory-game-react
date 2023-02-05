@@ -1,0 +1,14 @@
+.settings {
+
+    width: 90%;
+    max-width: 500px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.settings h2 {
+
+    text-align: center;
+
+}
