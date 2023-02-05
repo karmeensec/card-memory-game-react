@@ -6,11 +6,17 @@ import Counter from '../Counter';
 
 
 
-const Settings = () => {
+const Settings = ({startGame}) => {
 
     const [category, setCategory] = useState(CATEGORIES[0]);
     const [difficulty, setDifficulty] = useState(DIFFICULTY[0]);
     const [cardsCount, setCardsCount] = useState(INITIAL_CARD_COUNT);
+
+    const startGameClick = function() {
+
+      startGame({ category, difficulty, cardsCount })
+      
+    }
 
   return (
 
@@ -45,6 +51,9 @@ const Settings = () => {
         <div>
               <Counter cardsCount = {cardsCount} onClick = {setCardsCount} />
         </div>
+
+
+        <button className={`${styles.button}`} onClick= {startGameClick}> Start </button>
 
     </div>
 
