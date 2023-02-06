@@ -64,6 +64,29 @@ const useGameLogic = (photos, gameDifficulty) => {
     }
 
 
+    const checkMatch = function() {
+
+        const updatedCards = cards.map(card => {
+
+            if (visibleCards.indexOf(card.uniqueId) !== -1 ) {
+                card.isShown = false;
+            }
+
+            return card;
+
+        })
+        
+        
+        setTimeout( ()=> {
+
+                setCards(updatedCards);
+                setVisibleCards([]);
+
+        }, DIFFICULTIES[gameDifficulty]);
+
+    }
+
+
     useEffect( ()=> {
 
         if (photos.length > 0) makeCards();
@@ -76,22 +99,8 @@ const useGameLogic = (photos, gameDifficulty) => {
 
         if (visibleCards.length >= MAX_VISIBLE_CARDS) {            // our setState is asynchronous -> can be bigger than MAX_VISIBLE_CARDS
             
-            const updatedCards = cards.map(card => {
-
-                if (visibleCards.indexOf(card.uniqueId) !== -1 ) {
-                    card.isShown = false;
-                }
-
-                return card;
-
-            })
-            
-            
-            setTimeout( ()=> {
-
-                    setVisibleCards([]);
-
-                }, DIFFICULTIES[gameDifficulty]);
+            checkMatch();
+           
         }
 
     }, [visibleCards])
