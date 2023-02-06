@@ -3,6 +3,7 @@ import useGetPhotos from '../../hooks/useGetPhotos';
 import Loader from '../Loader/Loader';
 import PropTypes from 'prop-types'
 import useGameLogic from '../../hooks/useGameLogic';
+import Card from '../Card';
 
 
 const Board = ({ gameOptions }) => {
@@ -24,7 +25,7 @@ const Board = ({ gameOptions }) => {
 
     <div> 
       {loader && <Loader /> }
-      {!loader && cards.map(cards => <p> {cards.uniqueId} </p> ) }
+      {!loader && cards.map(card => <Card card = {card} key = {card.uniqueId} /> ) }
     </div>
 
   )

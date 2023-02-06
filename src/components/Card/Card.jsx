@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({ card }) => {
 
   return (
 
-    <div>Card</div>
-    
+    <div> {card.uniqueId} </div>
+
   )
 }
 
