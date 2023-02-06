@@ -21,9 +21,26 @@ const useGameLogic = (photos) => {
     }
 
 
-    const cardClick = function(uniqueId) {
+    const flipCard = function(clickCardUniqueId) {
 
-        console.log({uniqueId});
+        const flippedCards = cards.map( card => {
+
+            if (card.uniqueId === clickCardUniqueId) {
+                card.isShown = true;
+            }
+
+            return card;
+
+        })
+
+        setCards(flippedCards);
+
+    }
+
+
+    const cardClick = function(clickCardUniqueId) {
+
+        flipCard(clickCardUniqueId);
 
     }
 
