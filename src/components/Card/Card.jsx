@@ -35,7 +35,7 @@ export default Card
 Card.prototype = {
 
     card: PropTypes.shape({
-        id: PropTypes.string.isRequired,
+        uniqueId: PropTypes.number.isRequired,
         url: PropTypes.string.isRequired,
         isShown: PropTypes.bool.isRequired,
         isFinite: PropTypes.bool.isRequired,
