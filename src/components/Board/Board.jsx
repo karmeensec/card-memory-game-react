@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import useGetPhotos from '../../hooks/useGetPhotos';
 import Loader from '../Loader/Loader';
-
+import PropTypes from 'prop-types'
 
 
 const Board = ({ gameOptions }) => {
@@ -28,3 +28,16 @@ const Board = ({ gameOptions }) => {
 }
 
 export default Board
+
+
+Board.proptypes = {
+
+  gameOptions: PropTypes.shape({
+
+    category: PropTypes.string.isRequired,
+    difficulty: PropTypes.string.isRequired,
+    cardsCount: PropTypes.number.isRequired,
+
+  })
+
+}
