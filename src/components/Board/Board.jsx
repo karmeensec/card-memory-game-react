@@ -22,7 +22,10 @@ const Board = ({ gameOptions }) => {
 
   return (
 
-    <div> {loader && <Loader /> } </div>
+    <div> 
+      {loader && <Loader /> }
+      {!loader && cards.map(cards => <p> {cards.uniqueId} </p> ) }
+    </div>
 
   )
 }
