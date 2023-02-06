@@ -19,6 +19,7 @@ const useGameLogic = (photos, gameDifficulty) => {
     const [cards, setCards] = useState([]);
     const [visibleCards, setVisibleCards] = useState([]);
     const [score, setScore] = useState([]);
+    const [isWon, setIswon] = useState(false);
 
 
     const makeCards = function() {
@@ -65,6 +66,13 @@ const useGameLogic = (photos, gameDifficulty) => {
     }
 
 
+    const updateScore = function() {
+
+        setScore( previousScore => previousScore + 1 );
+
+    }
+
+
     const checkMatch = function() {
 
         const visible = cards.filter(card => visibleCards.indexOf(card.uniqueId) !== -1);
@@ -87,6 +95,7 @@ const useGameLogic = (photos, gameDifficulty) => {
 
                 setCards(updatedCards);
                 setVisibleCards([]);
+                if (matched) updateScore();
 
         }, DIFFICULTIES[gameDifficulty]);
 
@@ -109,7 +118,19 @@ const useGameLogic = (photos, gameDifficulty) => {
            
         }
 
-    }, [visibleCards])
+    }, [visibleCards]);
+
+
+
+    useEffect( ()=> {
+
+        if (photos.length && score === photos.length) {
+
+        }
+
+    }, [score]);
+
+
 
 
 
