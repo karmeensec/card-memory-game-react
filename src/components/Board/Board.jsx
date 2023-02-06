@@ -12,7 +12,7 @@ const Board = ({ gameOptions }) => {
 
   const [loader, setLoader] = useState(true);
 
-  const cards =  useGameLogic(photos);
+  const {cards, cardClick} =  useGameLogic(photos);
 
   useEffect( ()=> {
 
@@ -25,7 +25,7 @@ const Board = ({ gameOptions }) => {
 
     <div> 
       {loader && <Loader /> }
-      {!loader && cards.map(card => <Card card = {card} key = {card.uniqueId} /> ) }
+      {!loader && cards.map(card => <Card card = {card} key = {card.uniqueId} cardClick = {cardClick} /> ) }
     </div>
 
   )
