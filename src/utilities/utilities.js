@@ -13,3 +13,9 @@ export const getFormedData = function(data) {
     }))
 
 }
+
+export const getPairedPhotos = function(data) {
+
+    return data.reduce((photo, index) => photo.concat(index, index), []);
+
+}
