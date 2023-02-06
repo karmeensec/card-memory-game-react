@@ -4,7 +4,17 @@ import { addUniqueIdPhotos, getFormedData, getPairedPhotos, shuffleCards } from 
 
 const MAX_VISIBLE_CARDS = 2;
 
-const useGameLogic = (photos) => {
+const DIFFICULTIES = {
+
+    Easy: 1500, 
+    Medium: 1000,
+    Hard: 500, 
+    Extreme: 200,
+
+}
+
+
+const useGameLogic = (photos, gameDifficulty) => {
 
     const [cards, setCards] = useState([]);
     const [visibleCards, setVisibleCards] = useState([]);
@@ -81,7 +91,7 @@ const useGameLogic = (photos) => {
 
                     setVisibleCards([]);
 
-                }, 1000)
+                }, DIFFICULTIES[gameDifficulty]);
         }
 
     }, [visibleCards])
