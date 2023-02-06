@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { addUniqueIdPhotos, getFormedData, getPairedPhotos, shuffleCards } from '../utilities/utilities'
 
 const useGameLogic = (photos) => {
+
+    const [cards, setCards] = useState([]);
 
 
     const makeCards = function() {
