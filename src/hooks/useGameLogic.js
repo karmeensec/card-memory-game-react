@@ -18,6 +18,7 @@ const useGameLogic = (photos, gameDifficulty) => {
 
     const [cards, setCards] = useState([]);
     const [visibleCards, setVisibleCards] = useState([]);
+    const [score, setScore] = useState([]);
 
 
     const makeCards = function() {
