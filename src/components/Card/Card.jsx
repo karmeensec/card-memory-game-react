@@ -12,7 +12,7 @@ const Card = ({ card, cardClick }) => {
 
     <div className={`${styles.container}`} onClick = {onClick}>
 
-        <div className={`${styles.card}`}>
+        <div className={`${styles.card} ${card.isShown ? styles.flipped : ''} `}>
 
             <div className={`${styles.front}`}></div>
             <div className={`${styles.back}`}>
