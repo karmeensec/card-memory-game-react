@@ -12,7 +12,7 @@ const Board = ({ gameOptions }) => {
 
   const [loader, setLoader] = useState(true);
 
-  const {cards, cardClick} =  useGameLogic(photos);
+  const {cards, cardClick} =  useGameLogic(photos, gameOptions.difficulty);
 
   useEffect( ()=> {
 
