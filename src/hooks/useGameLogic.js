@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getFormedData } from '../utilities/utilities'
+import { getFormedData, getPairedPhotos } from '../utilities/utilities'
 
 const useGameLogic = (photos) => {
 
@@ -8,6 +8,9 @@ const useGameLogic = (photos) => {
 
         const formData = getFormedData(photos);
         console.log(formData);
+
+        const pairedPhotos = getPairedPhotos(formData);
+        console.log(pairedPhotos);
 
     }
 
