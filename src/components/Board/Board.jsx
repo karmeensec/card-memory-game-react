@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import useGetPhotos from '../../hooks/useGetPhotos';
 import Loader from '../Loader/Loader';
 import PropTypes from 'prop-types'
+import useGameLogic from '../../hooks/useGameLogic';
 
 
 const Board = ({ gameOptions }) => {
@@ -10,8 +11,7 @@ const Board = ({ gameOptions }) => {
 
   const [loader, setLoader] = useState(true);
 
-  console.log({photos})
-
+  const cards =  useGameLogic(photos);
 
   useEffect( ()=> {
 
