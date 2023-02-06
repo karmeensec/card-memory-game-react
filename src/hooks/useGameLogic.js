@@ -58,7 +58,34 @@ const useGameLogic = (photos) => {
 
         if (photos.length > 0) makeCards();
 
-    }, [photos])
+    }, [photos]);
+
+
+
+    useEffect( ()=> {
+
+        if (visibleCards.length >= MAX_VISIBLE_CARDS) {            // our setState is asynchronous -> can be bigger than MAX_VISIBLE_CARDS
+            
+            const updatedCards = cards.map(card => {
+
+                if (visibleCards.indexOf(card.uniqueId) !== -1 ) {
+                    card.isShown = false;
+                }
+
+                return card;
+
+            })
+            
+            
+            setTimeout( ()=> {
+
+                    setVisibleCards([]);
+
+                }, 1000)
+        }
+
+    }, [visibleCards])
+
 
 
     return {cards, cardClick};
