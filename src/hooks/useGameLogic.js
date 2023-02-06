@@ -20,6 +20,8 @@ const useGameLogic = (photos) => {
         const shuffleCardPhotos = shuffleCards(uniqueIdPhotos);
         console.log(shuffleCardPhotos);
 
+        setCards(shuffleCardPhotos);
+
     }
 
     useEffect( ()=> {
@@ -27,6 +29,9 @@ const useGameLogic = (photos) => {
         if (photos.length > 0) makeCards();
 
     }, [photos])
+
+
+    return cards;
   
 }
 
