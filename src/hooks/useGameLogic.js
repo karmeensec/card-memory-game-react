@@ -4,6 +4,7 @@ import { addUniqueIdPhotos, getFormedData, getPairedPhotos, shuffleCards } from 
 const useGameLogic = (photos) => {
 
     const [cards, setCards] = useState([]);
+    const [visibleCards, setVisibleCards] = useState([]);
 
 
     const makeCards = function() {
