@@ -35,3 +35,22 @@ export const addUniqueIdPhotos = function(data) {
 }
 
 
+// Shuffle the cards (StackOverFlow)
+export const shuffleCards = cards => {
+    let m = cards.length;
+    let t;
+    let i;
+
+    // While there remain elements to shuffle
+    while (m) {
+        // Pick a remaining element
+        i = Math.floor(Math.random() * m--);
+
+        // And swap it with the current element
+        t = cards[m];
+        cards[m] = cards[i];
+        cards[i] = t;
+    }
+
+    return cards;
+};
