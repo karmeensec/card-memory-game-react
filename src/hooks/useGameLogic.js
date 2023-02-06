@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getFormedData, getPairedPhotos } from '../utilities/utilities'
+import { addUniqueIdPhotos, getFormedData, getPairedPhotos } from '../utilities/utilities'
 
 const useGameLogic = (photos) => {
 
@@ -11,6 +11,9 @@ const useGameLogic = (photos) => {
 
         const pairedPhotos = getPairedPhotos(formData);
         console.log(pairedPhotos);
+
+        const uniqueIdPhotos = addUniqueIdPhotos(pairedPhotos);
+        console.log(uniqueIdPhotos);
 
     }
 
