@@ -18,7 +18,7 @@ const useGameLogic = (photos, gameDifficulty) => {
 
     const [cards, setCards] = useState([]);
     const [visibleCards, setVisibleCards] = useState([]);
-    const [score, setScore] = useState([]);
+    const [score, setScore] = useState(0);
     const [isWon, setIswon] = useState(false);
 
 
@@ -125,7 +125,7 @@ const useGameLogic = (photos, gameDifficulty) => {
     useEffect( ()=> {
 
         if (photos.length && score === photos.length) {
-
+            setIswon(true);
         }
 
     }, [score]);
@@ -134,7 +134,7 @@ const useGameLogic = (photos, gameDifficulty) => {
 
 
 
-    return {cards, cardClick};
+    return {cards, cardClick, isWon};
   
 }
 
