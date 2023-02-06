@@ -4,6 +4,7 @@ import Loader from '../Loader/Loader';
 import PropTypes from 'prop-types'
 import useGameLogic from '../../hooks/useGameLogic';
 import Card from '../Card';
+import Result from '../Result/Result';
 
 
 const Board = ({ gameOptions }) => {
@@ -12,7 +13,7 @@ const Board = ({ gameOptions }) => {
 
   const [loader, setLoader] = useState(true);
 
-  const {cards, cardClick} =  useGameLogic(photos, gameOptions.difficulty);
+  const {cards, cardClick, isWon} =  useGameLogic(photos, gameOptions.difficulty);
 
   useEffect( ()=> {
 
@@ -24,8 +25,11 @@ const Board = ({ gameOptions }) => {
   return (
 
     <div> 
+
+      {isWon && <Result />}
       {loader && <Loader /> }
       {!loader && cards.map(card => <Card card = {card} key = {card.uniqueId} cardClick = {cardClick} /> ) }
+
     </div>
 
   )
