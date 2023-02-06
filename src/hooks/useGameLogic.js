@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { addUniqueIdPhotos, getFormedData, getPairedPhotos, shuffleCards } from '../utilities/utilities'
 
+
+const MAX_VISIBLE_CARDS = 2;
+
 const useGameLogic = (photos) => {
 
     const [cards, setCards] = useState([]);
@@ -30,6 +33,9 @@ const useGameLogic = (photos) => {
                 card.isShown = true;
             }
 
+            if (card.isShown) 
+                setVisibleCards( previous => [...previous, card.uniqueId] )
+
             return card;
 
         })
@@ -41,7 +47,9 @@ const useGameLogic = (photos) => {
 
     const cardClick = function(clickCardUniqueId) {
 
-        flipCard(clickCardUniqueId);
+        if (visibleCards.length < MAX_VISIBLE_CARDS)
+
+            flipCard(clickCardUniqueId);
 
     }
 
