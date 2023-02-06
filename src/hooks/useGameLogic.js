@@ -66,10 +66,15 @@ const useGameLogic = (photos, gameDifficulty) => {
 
     const checkMatch = function() {
 
+        const visible = cards.filter(card => visibleCards.indexOf(card.uniqueId) !== -1);
+
+        const matched = visible[0].id === visible[1].id;
+
         const updatedCards = cards.map(card => {
 
             if (visibleCards.indexOf(card.uniqueId) !== -1 ) {
                 card.isShown = false;
+                card.isFound = matched;
             }
 
             return card;
