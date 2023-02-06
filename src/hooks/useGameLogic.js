@@ -9,20 +9,24 @@ const useGameLogic = (photos) => {
     const makeCards = function() {
 
         const formData = getFormedData(photos);
-        console.log(formData);
 
         const pairedPhotos = getPairedPhotos(formData);
-        console.log(pairedPhotos);
 
         const uniqueIdPhotos = addUniqueIdPhotos(pairedPhotos);
-        console.log(uniqueIdPhotos);
 
         const shuffleCardPhotos = shuffleCards(uniqueIdPhotos);
-        console.log(shuffleCardPhotos);
 
         setCards(shuffleCardPhotos);
 
     }
+
+
+    const cardClick = function(uniqueId) {
+
+        console.log({uniqueId});
+
+    }
+
 
     useEffect( ()=> {
 
@@ -31,7 +35,7 @@ const useGameLogic = (photos) => {
     }, [photos])
 
 
-    return cards;
+    return {cards, cardClick};
   
 }
 
