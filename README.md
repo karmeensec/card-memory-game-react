@@ -161,3 +161,10 @@ For glassmorphism background animations refer [here](https://codepen.io/jspilka9
 
 ![Screenshot (6)](https://user-images.githubusercontent.com/84046930/217242443-e8f52599-2489-4ccd-be75-9527fe45fcbe.png)
 
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at **kamil.ismayilzade.2016@gmail.com**
+
+
