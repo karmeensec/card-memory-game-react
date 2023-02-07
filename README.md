@@ -3,6 +3,8 @@
 
 Plays with cards up to 60, memorize identical cards, and win the game.
 
+Refer to this website: https://gamecardmemory.netlify.app
+
 
 ## Authors
 
