@@ -5,7 +5,11 @@
     box-sizing: border-box;
     font-family: 'Inknut Antiqua', serif;
     color: #1C2833;
+    
+}
 
+body {
+    overflow-x: hidden;
 }
 
 h1 {
@@ -23,4 +27,24 @@ h1 {
     backdrop-filter: blur(5.9px);
     -webkit-backdrop-filter: blur(5.9px);
 
+}
+
+footer {
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: .5rem;
+    font-weight: 600;
+    padding: 5px;
+    opacity: 0.4;
+
+}
+
+@media (max-width: 768px) {
+    html {
+
+        font-size: 60%;
+
+    }
 }

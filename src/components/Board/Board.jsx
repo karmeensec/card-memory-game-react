@@ -5,9 +5,10 @@ import PropTypes from 'prop-types'
 import useGameLogic from '../../hooks/useGameLogic';
 import Card from '../Card';
 import Result from '../Result/Result';
+import styles from './Board.module.css'
 
 
-const Board = ({ gameOptions }) => {
+const Board = ({ gameOptions, restartGame }) => {
 
   const photos =  useGetPhotos(gameOptions);
 
@@ -26,9 +27,9 @@ const Board = ({ gameOptions }) => {
 
     <div> 
 
-      {isWon && <Result />}
+      {isWon && <Result restartGame = {restartGame} />}
       {loader && <Loader /> }
-      {!loader && cards.map(card => <Card card = {card} key = {card.uniqueId} cardClick = {cardClick} /> ) }
+      {!loader &&  <div className={`${styles.board}`} >{ (cards.map(card => <Card card = {card} key = {card.uniqueId} cardClick = {cardClick} /> )) }</div>}
 
     </div>
 
@@ -46,6 +47,8 @@ Board.proptypes = {
     difficulty: PropTypes.string.isRequired,
     cardsCount: PropTypes.number.isRequired,
 
-  })
+  }),
+
+  restartGame: PropTypes.func.isRequired,
 
 }
