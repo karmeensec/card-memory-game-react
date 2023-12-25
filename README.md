@@ -165,6 +165,5 @@ For glassmorphism background animations refer [here](https://codepen.io/jspilka9
 
 ## Feedback
 
-If you have any feedback, please reach out to me at **kamil.ismayilzade.2016@gmail.com**
 
 
